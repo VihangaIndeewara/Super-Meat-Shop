@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="637.0" prefWidth="1446.0" style="-fx-background-color: #d8dede#dfe4e4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PurchaseOrderFormController">
+   <children>
+      <ImageView fitHeight="65.0" fitWidth="76.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/order.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="113.0" layoutY="45.0" prefHeight="35.0" prefWidth="245.0" text="Purchase Order Form">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <Glow level="0.75" />
+         </effect>
+      </Label>
+      <TableView fx:id="tblPurchaseForm" layoutX="18.0" layoutY="291.0" prefHeight="319.0" prefWidth="1013.0">
+         <columns>
+            <TableColumn fx:id="colMeatId" prefWidth="103.0" text="Meat Id" />
+            <TableColumn fx:id="colDescription" prefWidth="365.0" text="Description" />
+            <TableColumn fx:id="colQty" prefWidth="115.0" text="Qty (Kg)" />
+            <TableColumn fx:id="colPrice" prefWidth="176.0" text="Price (per Kg)" />
+            <TableColumn fx:id="colAmount" prefWidth="140.0" text="Amount" />
+            <TableColumn fx:id="colRemove" prefWidth="113.0" text="..." />
+         </columns>
+      </TableView>
+      <JFXComboBox fx:id="cmbPurchaseShopId" labelFloat="true" layoutX="262.0" layoutY="127.0" prefHeight="31.0" prefWidth="164.0" promptText="PurchaseShop Id" />
+      <JFXTextField fx:id="txtName" labelFloat="true" layoutX="469.0" layoutY="121.0" promptText="Name">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtFarmName" labelFloat="true" layoutX="696.0" layoutY="121.0" prefHeight="37.0" prefWidth="192.0" promptText="Farm Name">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtMeatType" labelFloat="true" layoutX="931.0" layoutY="121.0" promptText="Meat Type">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbMeatId" labelFloat="true" layoutX="31.0" layoutY="216.0" prefHeight="31.0" prefWidth="180.0" promptText="Meat Id" />
+      <JFXTextField fx:id="txtDescription" labelFloat="true" layoutX="262.0" layoutY="209.0" prefHeight="37.0" prefWidth="393.0" promptText="Description">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPurchasePrice" labelFloat="true" layoutX="716.0" layoutY="209.0" onKeyReleased="#txtKeyReleased" promptText="Purchase Price">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <Separator layoutX="13.0" layoutY="185.0" prefHeight="8.0" prefWidth="1352.0" />
+      <Separator layoutX="684.0" layoutY="203.0" orientation="VERTICAL" prefHeight="50.0" prefWidth="2.0" />
+      <JFXTextField fx:id="txtQty" labelFloat="true" layoutX="930.0" layoutY="209.0" onKeyReleased="#txtKeyReleased" prefHeight="31.0" prefWidth="126.0" promptText="Qty">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtOrId" labelFloat="true" layoutX="34.0" layoutY="122.0" promptText="Order Id">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="lblTotal" layoutX="1136.0" layoutY="362.0" prefHeight="65.0" prefWidth="205.0" text="      0.00">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="1187.0" layoutY="324.0" prefHeight="53.0" prefWidth="96.0" text="Total" textFill="#fc0303">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnPlaceOrder" buttonType="RAISED" layoutX="1131.0" layoutY="500.0" onAction="#btnPlaceOrderOnAction" prefHeight="57.0" prefWidth="236.0" style="-fx-background-color: #9e6180; -fx-background-radius: 10;" text="          Place Order" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="50.0" fitWidth="53.0" layoutX="1144.0" layoutY="503.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/invoice.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnAddToCart" buttonType="RAISED" layoutX="1235.0" layoutY="216.0" onAction="#btnAddToCartOnAction" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #6f8d90;" text="Add to Cart" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

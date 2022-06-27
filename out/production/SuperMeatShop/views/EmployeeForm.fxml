@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="637.0" prefWidth="1446.0" style="-fx-background-color: #d8dede#dfe4e4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EmployeeFormController">
+   <children>
+      <Label layoutX="79.0" layoutY="31.0" prefHeight="35.0" prefWidth="189.0" text="Employee Form">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <Glow level="0.75" />
+         </effect>
+      </Label>
+      <TableView fx:id="tblEmployeeForm" layoutX="4.0" layoutY="312.0" prefHeight="316.0" prefWidth="1101.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="66.0" text="Id" />
+            <TableColumn fx:id="colName" prefWidth="172.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="335.0" text="Address" />
+            <TableColumn fx:id="colJoinDate" prefWidth="136.0" text="Join Date" />
+            <TableColumn fx:id="colResigningDate" prefWidth="151.0" text="Resigning Date" />
+            <TableColumn fx:id="colSalary" prefWidth="125.0" text="Salary" />
+            <TableColumn fx:id="colContactNo" prefWidth="113.0" text="Contact No" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtEmployeeId" labelFloat="true" layoutX="99.0" layoutY="131.0" onKeyReleased="#txtKeyReleased" promptText="Employee Id" />
+      <JFXTextField fx:id="txtEmployeeName" labelFloat="true" layoutX="301.0" layoutY="130.0" onKeyReleased="#txtKeyReleased" prefHeight="31.0" prefWidth="214.0" promptText="Employee Name" />
+      <JFXTextField fx:id="txtEmployeeAddress" labelFloat="true" layoutX="538.0" layoutY="130.0" onKeyReleased="#txtKeyReleased" prefHeight="31.0" prefWidth="306.0" promptText="Employee Address" />
+      <JFXTextField fx:id="txtEmployeeSalary" labelFloat="true" layoutX="298.0" layoutY="214.0" onKeyReleased="#txtKeyReleased" prefHeight="31.0" prefWidth="222.0" promptText="Salary" />
+      <JFXTextField fx:id="txtEmployeeContactNo" labelFloat="true" layoutX="542.0" layoutY="214.0" onKeyReleased="#txtKeyReleased" prefHeight="31.0" prefWidth="189.0" promptText="Contact No" />
+      <AnchorPane layoutX="1114.0" layoutY="14.0" prefHeight="610.0" prefWidth="320.0" style="-fx-background-color: #bdc3c7;">
+         <children>
+            <Label layoutX="47.0" layoutY="40.0" prefHeight="27.0" prefWidth="241.0" text="Update OR Delete Employee">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="32.0" layoutY="80.0" prefHeight="0.0" prefWidth="263.0" />
+            <JFXTextField fx:id="txtUpdateId" labelFloat="true" layoutX="44.0" layoutY="110.0" prefHeight="31.0" prefWidth="232.0" promptText="Employee Id" />
+            <JFXTextField fx:id="txtUpdateName" labelFloat="true" layoutX="44.0" layoutY="174.0" prefHeight="31.0" prefWidth="232.0" promptText="Employee Name" />
+            <JFXTextField fx:id="txtUpdateAddress" labelFloat="true" layoutX="41.0" layoutY="242.0" prefHeight="31.0" prefWidth="232.0" promptText="Employee Address" />
+            <JFXTextField fx:id="txtUpdateJoinDate" labelFloat="true" layoutX="44.0" layoutY="306.0" prefHeight="31.0" prefWidth="232.0" promptText="Join Date" />
+            <JFXTextField fx:id="txtUpdateResigningDate" labelFloat="true" layoutX="44.0" layoutY="371.0" prefHeight="31.0" prefWidth="232.0" promptText="Resigning Date" />
+            <JFXTextField fx:id="txtUpdateSalary" labelFloat="true" layoutX="44.0" layoutY="435.0" prefHeight="31.0" prefWidth="232.0" promptText="Salary" />
+            <JFXTextField fx:id="txtUpdateContactNo" labelFloat="true" layoutX="44.0" layoutY="495.0" prefHeight="31.0" prefWidth="232.0" promptText="Contact No" />
+            <JFXButton buttonType="RAISED" layoutX="42.0" layoutY="565.0" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: #16a085;" text="Update">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="172.0" layoutY="565.0" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: #f92c36;" text="Delete">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXTextField fx:id="txtEmployeeResigningDate" labelFloat="true" layoutX="99.0" layoutY="214.0" onKeyReleased="#txtKeyReleased" promptText="Resigning Date" />
+      <JFXTextField fx:id="txtEmployeeJoinDate" labelFloat="true" layoutX="870.0" layoutY="131.0" onKeyReleased="#txtKeyReleased" promptText="Join Date" />
+      <ImageView fitHeight="52.0" fitWidth="53.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/employee.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="891.0" layoutY="214.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="148.0" style="-fx-background-color: #809de0#809de0;" text="Save" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

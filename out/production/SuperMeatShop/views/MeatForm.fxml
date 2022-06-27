@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="637.0" prefWidth="1446.0" style="-fx-background-color: #d8dede#dfe4e4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MeatFormController">
+   <children>
+      <Label layoutX="89.0" layoutY="40.0" prefHeight="21.0" prefWidth="155.0" text="Meat Form">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <Glow level="0.75" />
+         </effect>
+      </Label>
+      <TableView fx:id="tblMeatForm" layoutX="55.0" layoutY="312.0" prefHeight="316.0" prefWidth="1046.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="87.0" text="Id" />
+            <TableColumn fx:id="colDescription" prefWidth="442.0" text="Description" />
+            <TableColumn fx:id="colQtyOnHand" prefWidth="153.0" text="QtyOnHand  (Kg)" />
+            <TableColumn fx:id="colPurchasePrice" prefWidth="170.0" text="Purchase Price" />
+            <TableColumn fx:id="colSellingPrice" prefWidth="192.0" text="Selling Price" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtMeatId" labelFloat="true" layoutX="102.0" layoutY="153.0" onKeyReleased="#txtKeyReleased" promptText="Meat Id" />
+      <JFXTextField fx:id="txtDescription" labelFloat="true" layoutX="320.0" layoutY="152.0" onKeyReleased="#txtKeyReleased" prefHeight="31.0" prefWidth="391.0" promptText="Description" />
+      <JFXTextField fx:id="txtQtyOnHand" labelFloat="true" layoutX="759.0" layoutY="153.0" onKeyReleased="#txtKeyReleased" prefHeight="31.0" prefWidth="216.0" promptText="QtyOnHand (KG)" />
+      <JFXTextField fx:id="txtPurchasePrice" labelFloat="true" layoutX="102.0" layoutY="221.0" onKeyReleased="#txtKeyReleased" promptText="Purchase Price" />
+      <JFXTextField fx:id="txtSellingPrice" labelFloat="true" layoutX="320.0" layoutY="221.0" onKeyReleased="#txtKeyReleased" prefHeight="31.0" prefWidth="205.0" promptText="Selling Price" />
+      <AnchorPane layoutX="1117.0" layoutY="14.0" prefHeight="610.0" prefWidth="320.0" style="-fx-background-color: #bdc3c7;">
+         <children>
+            <Label layoutX="68.0" layoutY="40.0" prefHeight="27.0" prefWidth="205.0" text="Update OR Delete Meat">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="32.0" layoutY="80.0" prefHeight="0.0" prefWidth="263.0" />
+            <JFXTextField fx:id="txtUpdateId" labelFloat="true" layoutX="44.0" layoutY="145.0" prefHeight="31.0" prefWidth="232.0" promptText="Meat Id" />
+            <JFXTextField fx:id="txtUpdateDescription" labelFloat="true" layoutX="44.0" layoutY="214.0" prefHeight="31.0" prefWidth="232.0" promptText="Description" />
+            <JFXTextField fx:id="txtUpdateQtyOnHand" labelFloat="true" layoutX="41.0" layoutY="287.0" prefHeight="31.0" prefWidth="232.0" promptText="QtyOnHand (KG)" />
+            <JFXTextField fx:id="txtUpdatePurchasePrice" labelFloat="true" layoutX="44.0" layoutY="358.0" prefHeight="31.0" prefWidth="232.0" promptText="Purchase Price" />
+            <JFXTextField fx:id="txtUpdateSellingPrice" labelFloat="true" layoutX="44.0" layoutY="426.0" prefHeight="31.0" prefWidth="232.0" promptText="Selling Price" />
+            <JFXButton buttonType="RAISED" layoutX="42.0" layoutY="531.0" onAction="#btnUpdateOnAction" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: #16a085;" text="Update">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="170.0" layoutY="531.0" onAction="#btnDeleteOnAction" prefHeight="31.0" prefWidth="114.0" style="-fx-background-color: #f92c36;" text="Delete">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="64.0" fitWidth="66.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/meat.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnSave" buttonType="RAISED" layoutX="860.0" layoutY="221.0" onAction="#btnSaveOnAction" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: #809de0#809de0;" text="Save" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

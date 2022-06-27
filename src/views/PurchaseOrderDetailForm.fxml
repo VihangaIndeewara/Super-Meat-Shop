@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="637.0" prefWidth="1446.0" style="-fx-background-color: #d8dede#dfe4e4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PurchaseOrderDetailFormController">
+   <children>
+      <ImageView fitHeight="56.0" fitWidth="59.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/order.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="89.0" layoutY="35.0" prefHeight="35.0" prefWidth="250.0" text="Purchase Order Details">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <Glow level="0.75" />
+         </effect>
+      </Label>
+      <TableView fx:id="tblOrderDetail" layoutX="108.0" layoutY="122.0" prefHeight="444.0" prefWidth="1230.0" style="-fx-background-color: #faf9e0;">
+         <columns>
+            <TableColumn fx:id="colOrderId" prefWidth="163.0" text="Order ID" />
+            <TableColumn fx:id="colShopId" prefWidth="163.0" text="Shop ID" />
+            <TableColumn fx:id="colMeatId" prefWidth="177.0" text="Meat ID" />
+            <TableColumn fx:id="colQty" prefWidth="170.0" text="Qty" />
+            <TableColumn fx:id="colPrice" prefWidth="204.0" text="Price" />
+            <TableColumn fx:id="colDate" prefWidth="193.0" text="Date" />
+            <TableColumn fx:id="colTime" prefWidth="140.0" text="Time" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

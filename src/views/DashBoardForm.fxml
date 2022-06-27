@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AllDashBoard" prefHeight="703.0" prefWidth="1683.0" style="-fx-background-color: CDCDCD;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
+   <children>
+      <AnchorPane layoutY="1.0" prefHeight="702.0" prefWidth="230.0" style="-fx-background-color: #5d858f;">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="214.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/badge.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutY="212.0" onAction="#btnClientOnAction" prefHeight="45.0" prefWidth="236.0" style="-fx-background-color: 597F88;" text=" Client">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutY="261.0" onAction="#btnMeatOnAction" prefHeight="45.0" prefWidth="236.0" text="Meat">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutY="310.0" onAction="#btnOrderOnAction" prefHeight="45.0" prefWidth="236.0" text="Order">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutY="408.0" onAction="#btnEmployeeOnAction" prefHeight="45.0" prefWidth="236.0" text="       Employee">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutY="457.0" onAction="#btnPurchaseShopOnAction" prefHeight="45.0" prefWidth="236.0" text="               Purchase Shop">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutY="507.0" onAction="#btnPurchaseOrderOnAction" prefHeight="45.0" prefWidth="236.0" text="                Purchase Order">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="-1.0" layoutY="605.0" onAction="#btnProfitOnAction" prefHeight="45.0" prefWidth="242.0" text="Profit">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="26.0" layoutY="218.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/client.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="23.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/meat.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="26.0" layoutY="315.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/order.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="24.0" layoutY="413.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/employee.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="26.0" layoutY="462.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/store.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="26.0" layoutY="512.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/order.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="26.0" layoutY="610.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/profit.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutY="163.0" onAction="#btnDashBoardOnAction" prefHeight="45.0" prefWidth="236.0" text="         DashBoard">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="26.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/dashboard.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutY="359.0" onAction="#btnOrderDetailsOnAction" prefHeight="45.0" prefWidth="242.0" text="           Order Details">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="27.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/order.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="2.0" layoutY="556.0" onAction="#btnPurchaseOrderDetailsOnAction" prefHeight="45.0" prefWidth="242.0" text="               Purchase Details">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="35.0" fitWidth="41.0" layoutX="26.0" layoutY="561.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/order.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblTime" layoutX="1054.0" layoutY="16.0" prefHeight="21.0" prefWidth="82.0" text="08 :45 :12">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="DashBoardContext" layoutX="253.0" layoutY="53.0" prefHeight="646.0" prefWidth="1446.0" style="-fx-background-color: A6A9A7;">
+         <children>
+            <Label layoutX="749.0" layoutY="135.0" text="About Us">
+               <font>
+                  <Font name="System Bold Italic" size="30.0" />
+               </font>
+            </Label>
+            <JFXTextArea editable="false" layoutX="767.0" layoutY="211.0" prefHeight="376.0" prefWidth="580.0" text="Welcome to the food revolution. Welcome to Super Meat Shop!&#10;&#10;Super Meat Shop opened its doors with a singular mission.&#10;&#10;“To delight food lovers with superior quality meats to the door step &amp; make home cooking hassle free &amp; fun! ”&#10;&#10;Super Meat Shop is for all occasions, whether it’s a party hosted at home, a snack after work or just another meal at home, hotel meals , resturant meals. Super Meat Shop is for everyone, for the ardent food lover, for the health conscious, for kids for elders everyone! We have the leading meat aggregator in Sri Lanka and have a wide variety across all meat types to suite you mood.&#10;&#10;We meticulously select &amp; deliver you the freshest meat and meat products to help you create recipes you’ll be proud to serve to your family and friends.&#10;&#10;" />
+            <JFXTextArea editable="false" layoutX="53.0" layoutY="491.0" prefHeight="100.0" prefWidth="254.0" text="No: 512, W. E. Bastian Mawatha, &#10;Dehiwala. &#10;Hotline: 0777 333 454&#10;Email: supermeatshop@gmail.com" />
+            <Label layoutX="53.0" layoutY="446.0" text="Office :">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="371.0" layoutY="446.0" text="Business Hours : ">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <JFXTextArea editable="false" layoutX="371.0" layoutY="491.0" prefHeight="100.0" prefWidth="318.0" text="MON – SAT :     09:00 AM – 06:30 PM&#10;&#10;SUNDAY :          09:00 AM – 04:00 PM" />
+            <ImageView fitHeight="248.0" fitWidth="273.0" layoutX="34.0" layoutY="98.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/pieces-raw-fresh-meat-isolated-black-stone-board-side.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="248.0" fitWidth="273.0" layoutX="359.0" layoutY="98.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../asserts/sliced-raw-pork-used-cooking-with-chili-tomato-basil-fresh-pepper-seeds.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label fx:id="lblDate" layoutX="1213.0" layoutY="15.0" prefHeight="27.0" prefWidth="125.0" text="2022- 03- 10">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="1414.0" layoutY="10.0" onAction="#btnLogOutOnAction" prefHeight="31.0" prefWidth="214.0" style="-fx-background-color: EE4E4E; -fx-background-radius: 10;" text="Log Out">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

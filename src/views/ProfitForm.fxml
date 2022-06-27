@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onKeyReleased="#txtKeyReleased" prefHeight="637.0" prefWidth="1446.0" style="-fx-background-color: #d8dede#dfe4e4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProfitFormController">
+   <children>
+      <ImageView fitHeight="56.0" fitWidth="59.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/profit.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="89.0" layoutY="35.0" prefHeight="21.0" prefWidth="103.0" text="Profit">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <Glow level="0.75" />
+         </effect>
+      </Label>
+      <TableView fx:id="tblProfitForm" layoutX="52.0" layoutY="151.0" prefHeight="438.0" prefWidth="697.0">
+         <columns>
+            <TableColumn fx:id="colProfitId" prefWidth="102.0" text="Id" />
+            <TableColumn fx:id="colOrderId" prefWidth="130.0" text="Order Id" />
+            <TableColumn fx:id="colPurchasePrice" prefWidth="152.0" text="Purchase Price" />
+            <TableColumn fx:id="colSellingPrice" prefWidth="149.0" text="Selling Price" />
+            <TableColumn fx:id="colAmount" prefWidth="162.0" text="Amount" />
+         </columns>
+      </TableView>
+      <Separator layoutX="788.0" layoutY="20.0" orientation="VERTICAL" prefHeight="590.0" prefWidth="13.0" />
+      <JFXButton buttonType="RAISED" layoutX="1197.0" layoutY="448.0" onAction="#btnBarChatOnAction" prefHeight="56.0" prefWidth="163.0" style="-fx-background-color: #8bd0f6;" text="Bar Chart " textFill="#5d5959">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></JFXButton>
+      <Label layoutX="876.0" layoutY="495.0" text="Last 10 Orders Profit" textFill="#575151">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="1197.0" layoutY="530.0" onAction="#btnPieChartOnAction" prefHeight="56.0" prefWidth="163.0" style="-fx-background-color: #f1f4b9;" text="Pie Chart " textFill="#5d5959">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></JFXButton>
+      <Separator layoutX="832.0" layoutY="402.0" prefHeight="6.0" prefWidth="591.0" />
+      <Label fx:id="lblTotalProfit" layoutX="1135.0" layoutY="282.0" prefHeight="67.0" prefWidth="205.0" text="0.00" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtStartDate" layoutX="892.0" layoutY="188.0" onKeyReleased="#txtKeyReleased" promptText="2022-01-01" />
+      <TextField fx:id="txtEndDate" layoutX="1122.0" layoutY="188.0" onKeyReleased="#txtKeyReleased" promptText="2022-01-31" />
+      <Label layoutX="892.0" layoutY="157.0" prefHeight="21.0" prefWidth="103.0" text="Start Date" />
+      <Label layoutX="1122.0" layoutY="157.0" prefHeight="21.0" prefWidth="103.0" text="End Date" />
+      <JFXButton fx:id="btnOk" buttonType="RAISED" layoutX="1339.0" layoutY="188.0" onAction="#btnOkOnAction" prefHeight="31.0" prefWidth="78.0" style="-fx-background-color: #6f8d90;" text="OK" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="862.0" layoutY="70.0" prefHeight="42.0" prefWidth="532.0" text="Total Profit Between Entered Dates" textFill="#575151">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="945.0" layoutY="294.0" prefHeight="42.0" prefWidth="163.0" text="Profit Amount" textFill="#d70a0a">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="1339.0" layoutY="239.0" onAction="#btnClearOnAction" prefHeight="31.0" prefWidth="78.0" style="-fx-background-color: #e4615c;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
